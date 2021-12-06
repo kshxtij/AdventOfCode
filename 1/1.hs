@@ -1,13 +1,8 @@
 import System.IO
 import Data.Function
 
-isGreater :: Integer -> Integer -> Integer
-isGreater x y
-  | y > x     = 1
-  | otherwise = 0
-
-countIncreases :: [Integer] -> Integer
-countIncreases x = sum $ zipWith isGreater x $ tail x
+countIncreases :: [Integer] -> Int
+countIncreases x = sum $ map fromEnum (zipWith (<) x $ tail x)
 
 slidingWindowSum :: Integer -> [Integer] -> [Integer]
 slidingWindowSum windowSize list
