@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-def part1(data, days):
+def solve(data, days):
     fish = defaultdict(int)
     for times in data.split(','):
         n = int(times)
@@ -19,9 +19,9 @@ def part1(data, days):
 
 if __name__ == '__main__':
     input_data = open("input.txt").read()
-    ans1 = part1(input_data,80)
+    ans1 = solve(input_data,80)
     print("Day 1: ", ans1)
-    ans2 = part1(input_data,256)
+    ans2 = solve(input_data,256)
     print("Day 2: ", ans2)
                 
     
