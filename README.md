@@ -4,7 +4,7 @@ Advent of code 2021 solutions
 
 | Day  | Python|Rust|Haskell|
 | -----| ----- | ----| ------|
-|   1  | ✅    |    |        | 
+|   1  | ✅    | ✅ | ✅ | 
 |   2  | ✅    |    |        |
 |   3  | ✅    |    |        |
 |   4  | ✅    |    |        |
