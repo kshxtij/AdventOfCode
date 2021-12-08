@@ -28,12 +28,13 @@ for line in data.splitlines():
     parts = line.split(" | ")
     calib = ["".join(sorted(s)) for s in parts[0].split()]
     target = ["".join(sorted(s)) for s in parts[1].split()]
+    task1 += len(list(filter(lambda x: len(x) in [2, 4, 3, 7], target)))
     for p in permutations("abcdefg"):
         translate_table = str.maketrans("abcdefg", "".join(p))
         translated = ["".join(sorted(c.translate(translate_table))) for c in calib]
         if all(t in digits for t in translated):
             translated2 = [digits["".join(sorted(c.translate(translate_table)))] for c in target]
-            task1 += translated2.count(1) + translated2.count(4) + translated2.count(7) + translated2.count(8)
+            print(translated2)
             task2 += int("".join(str(n) for n in translated2))
 print("Part 1: ", task1)
 print("Part 2: ", task2)
