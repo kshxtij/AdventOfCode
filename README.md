@@ -12,3 +12,7 @@ Advent of code 2021 solutions
 |   6  | ✅    | ✅ | ✅ |
 |   7  | ✅    |   |   |
 |   8  | ✅    |   |   |
+
+# Meme Solutions
+
+Day 2 Task 1 in Rockstar
