@@ -34,7 +34,6 @@ for line in data.splitlines():
         translated = ["".join(sorted(c.translate(translate_table))) for c in calib]
         if all(t in digits for t in translated):
             translated2 = [digits["".join(sorted(c.translate(translate_table)))] for c in target]
-            print(translated2)
             task2 += int("".join(str(n) for n in translated2))
 print("Part 1: ", task1)
 print("Part 2: ", task2)
