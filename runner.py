@@ -15,9 +15,11 @@ from rich.table import Table
 from rich.console import Console
 console = Console()
 
-template = f"""# Path: src/{year}/day{day}.py
+@app.command()
+def setup(year: int = year, day: int = day):
+  template = f"""# Path: src/{year}/day{day}.py
 def parse_input():
-    with open(".input/{year}/day{day}.input.txt") as f:
+    with open("input/{year}/day{day}.input.txt") as f:
         pass
 
 def task1(data):
@@ -31,9 +33,6 @@ if __name__ == "__main__":
   task1(data)
   task2(data)
 """
-
-@app.command()
-def setup(year: int = year, day: int = day):
   with open(f"src/{year}/day{day}.py", "w") as f:
     f.write(template)
 
