@@ -5,7 +5,7 @@ def parse_input():
 
 R = {
       "A": 1, # rock
-      "B": 2, # ppaer
+      "B": 2, # paper
       "C": 3, # sciss
     }
 Q = {
@@ -58,40 +58,7 @@ def task2(data):
 
   print(score)
 
-
 if __name__ == "__main__":
   data = parse_input()
   task1(data)
   task2(data)
-
-#   S = 0
-#   for a, b in IN:
-#       O = None
-#       if b == "X":
-#           S += 0
-#           if a == "A":
-#               O = "Z"
-#           elif a == "B":
-#               O = "X"
-#           else:
-#               O = "Y"
-#       elif b == "Y":
-#           S += 3
-#           if a == "A":
-#               O = "X"
-#           elif a == "B":
-#               O = "Y"
-#           else:
-  #             O = "Z"
-  #     else:
-  #         S += 6
-  #         if a == "A":
-  #             O = "Y"
-  #         elif a == "B":
-  #             O = "Z"
-  #         else:
-  #             O = "X"
-      
-  #     S += Q[O]
-      
-  # print(S)
